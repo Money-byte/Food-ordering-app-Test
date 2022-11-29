@@ -1,6 +1,7 @@
 import React from 'react'
 import './MapHotels.css'
 import Foodimg from '../../Images/fooddelivery.jpg'
+import { Link } from 'react-router-dom'
 
 function MapHotels() {
   return (
@@ -18,7 +19,8 @@ function MapHotels() {
                 <div className='textDetails'>
                     <img src={Foodimg} alt="" />
                     <h2>Search nearby hotels </h2>
-                    <a href="">Click here for Nearby Hotels</a>
+                    <Link to="/hotels">
+                    Click here for Nearby Hotels</Link>
                 </div>
                 </div>
                 </div>
