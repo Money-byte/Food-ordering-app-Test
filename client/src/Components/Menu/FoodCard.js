@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-const Product = ({product}) => {
+const Product = ({product, handleClick}) => {
   return (
     <Card sx={{ width: '30%', marginBottom: '5%' }}>
       <CardMedia
@@ -22,9 +22,12 @@ const Product = ({product}) => {
         <Typography variant="body2" color="text.secondary">
             {product.content}
         </Typography>
+        <Typography variant="h6" color="text.secondary">
+            Rs. {product.price}
+        </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Add to Cart</Button>
+        <Button size="small" onClick={() => handleClick(product)}>Add to Cart</Button>
       </CardActions>
     </Card>
   );
