@@ -29,9 +29,11 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
   },
 }));
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({size}) {
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -49,7 +51,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{backgroundColor: 'transparent'}}>
+    <AppBar position="sticky" sx={{backgroundColor: 'white'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -141,14 +143,15 @@ function ResponsiveAppBar() {
               </Link>
             ))}
           </Box>
-
+          <Link to="/cart">
           <Box sx={{ flexGrow: 0 }}>
           <IconButton aria-label="cart">
-      <StyledBadge badgeContent={0} color="secondary">
+      <StyledBadge badgeContent={size} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge>
     </IconButton>
           </Box>
+          </Link>
         </Toolbar>
       </Container>
     </AppBar>
