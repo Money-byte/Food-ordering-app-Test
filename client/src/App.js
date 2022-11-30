@@ -1,9 +1,10 @@
-import NavBar from './Components/NavBar/NavBar'
-
+//import NavBar from './Components/NavBar/NavBar'
+import Banner from './Components/ThemeBanner/Banner';
 function App() {
   return (
     <div>
-      <NavBar/>
+      {/* <NavBar/> */}
+      <Banner/>
     </div>
   );
 }

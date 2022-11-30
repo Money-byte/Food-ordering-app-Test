@@ -2,8 +2,8 @@ import React from 'react'
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Orderboy from '../../Images/Orderboy.png';
-import { red } from '@mui/material/colors';
+import { pink } from '@mui/material/colors';
+
 
 
 function Banner() {
@@ -14,7 +14,7 @@ function Banner() {
             width: '100%',
             height: '100vh',
             pt:'20%',
-            bgcolor:'red',
+            bgcolor:'pink',
           
             
           }}
@@ -32,9 +32,7 @@ function Banner() {
 
         </Box>
         
-        {/* <div>
-        <img src='Orderboy.png' height="300px" wedth="300px"></img>   
-        </div> */}
+      
     </div>
   )
 }
